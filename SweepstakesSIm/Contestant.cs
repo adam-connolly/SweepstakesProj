@@ -14,11 +14,9 @@ namespace SweepstakesSIm
         public string EmailAddress;
         public int RegistrationNumber;
 
-        public Contestant(string firstName, string lastName, string emailAddress)
+        public Contestant()
         {
-            FirstName = firstName;
-            LastName = lastName;
-            EmailAddress = emailAddress;
+
         }
     }
 }

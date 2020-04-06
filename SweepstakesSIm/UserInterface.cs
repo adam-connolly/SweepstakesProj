@@ -10,12 +10,10 @@ namespace SweepstakesSIm
     {
         public static string GetUserInputFor(string prompt)
         {
-            Console.WriteLine("Please enter first name:");
-            FirstName = Console.ReadLine();
-            Console.WriteLine("Please enter last name:");
-            LastName = Console.ReadLine();
-            Console.WriteLine("Please enter email address:");
-            EmailAddress = Console.ReadLine();
+            string input;
+            Console.WriteLine($"Please enter {prompt}:");
+            input = Console.ReadLine();
+            return input;
         }
     }
 }
