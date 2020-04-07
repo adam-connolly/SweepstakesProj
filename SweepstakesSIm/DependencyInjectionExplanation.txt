@@ -1,0 +1,6 @@
+﻿Dependency Injection Explanation
+
+In the MarketingFirm class, I have dependency injection upon instantiation of a marketing firm. In this case, this allows me to only write one class and set of code for the instantiation and
+utilization of the class. The two different possibilities of using the ISweepstakesManager interface will allow different functionality of the implemented methods without having to write an
+entirely different set of code for the whole path relating to the decision to use a StackManager or a QueueManager. The functionality of the methods implemented are the only differences in code,
+thus allowing more levels of abstraction and allowing the addition of other SweepstakesManager options, so long as they inherit from the ISweepstakesManager interface.

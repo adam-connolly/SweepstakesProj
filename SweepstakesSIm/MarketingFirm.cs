@@ -13,9 +13,10 @@ namespace SweepstakesSIm
         {
             this.manager = manager;
         }
-        public void CreateSweepstakes()
+        public Sweepstakes CreateSweepstakes()
         {
-            Sweepstakes sweepstakes = new Sweepstakes(UserInterface.GetSweepstakesName());            
+            Sweepstakes sweepstakes = new Sweepstakes(UserInterface.GetSweepstakesName());
+            return sweepstakes;
         }
         public void AddSweepstakesToManager(Sweepstakes sweepstakes)
         {

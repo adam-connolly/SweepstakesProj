@@ -25,9 +25,9 @@ namespace SweepstakesSIm
                    "Press 2 for Stack Manager");
                 userInput = Console.ReadLine();
             } 
-            while (userInput != "1" || userInput != "2");
+            while (userInput != "1" && userInput != "2");
             return userInput;
-        }
+       }
         public static string GetSweepstakesName()
         {
             Console.WriteLine("What would you like to name the sweepstakes?");

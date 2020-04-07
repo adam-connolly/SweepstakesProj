@@ -8,10 +8,20 @@ namespace SweepstakesSIm
 {
     class Simulation
     {
+        MarketingFirm marketingFirm;
+        public void RunSimluation()
+        {
+            marketingFirm = CreateMarketingFirmWithManager();
+            Sweepstakes boatSweepstakes = marketingFirm.CreateSweepstakes();
+            marketingFirm.AddSweepstakesToManager(boatSweepstakes);
+            Contestant adam = new Contestant();
+            boatSweepstakes.RegisterContestant(adam);
+        }
 
-        public void CreateMarketingFirmWithManager()
+        public MarketingFirm CreateMarketingFirmWithManager()
         {            
             MarketingFirm marketingFirm = new MarketingFirm(ManagerFactory.CreateManager(UserInterface.GetManagerString()));
+            return marketingFirm;
         }
     }
 }
