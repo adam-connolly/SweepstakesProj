@@ -9,14 +9,17 @@ namespace SweepstakesSIm
     class SweepstakesStackManager : ISweepstakesManager
     {
         Stack<Sweepstakes> stack;
+        public SweepstakesStackManager()
+        {
+            stack = new Stack<Sweepstakes>();
+        }
         public Sweepstakes GetSweepstakes()
         {
-
+            return stack.Pop();
         }
-
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-
+            stack.Push(sweepstakes);
         }
     }
 }

@@ -10,8 +10,8 @@ namespace SweepstakesSIm
     {
 
         public void CreateMarketingFirmWithManager()
-        {
-
+        {            
+            MarketingFirm marketingFirm = new MarketingFirm(ManagerFactory.CreateManager(UserInterface.GetManagerString()));
         }
     }
 }

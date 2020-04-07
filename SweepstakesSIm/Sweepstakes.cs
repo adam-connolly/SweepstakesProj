@@ -10,12 +10,12 @@ namespace SweepstakesSIm
     {
         Dictionary<int, Contestant> contestants;
         string name;
-        public string Name { get { return name; } set { name = value; } }
+        public string Name { get { return name; } }
         int startingRegistrationNumber;
 
-        public Sweepstakes(string name)
+        public Sweepstakes(string nameOfSweepstakes)
         {
-            Name = name;
+            name = nameOfSweepstakes;
             startingRegistrationNumber = 1001;
             contestants = new Dictionary<int, Contestant>();
         }
@@ -36,10 +36,12 @@ namespace SweepstakesSIm
             {
                 if (contestant.Key == winningNumber)
                 {
-                    Console.WriteLine($"{contestant.Key} {contestant.Value} is the winner!");
-                    return contestant;
+                    Console.WriteLine($"{contestant.Value} {contestant.Key} is the winner!");
+                    return contestant.Value;
                 }
+
             }
+            return new Contestant();
         }
         public void PrintContestantInfo(Contestant contestant)
         {

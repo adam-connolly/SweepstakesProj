@@ -8,14 +8,18 @@ namespace SweepstakesSIm
 {
     class MarketingFirm
     {
-        
-        public MarketingFirm()
+        ISweepstakesManager manager;
+        public MarketingFirm(ISweepstakesManager manager)
         {
-                       
+
         }
         public void CreateSweepstakes()
         {
-
+            Sweepstakes sweepstakes = new Sweepstakes(UserInterface.GetSweepstakesName());            
+        }
+        public void AddSweepstakesToManager(Sweepstakes sweepstakes)
+        {
+            manager.InsertSweepstakes(sweepstakes);
         }
     }
 }

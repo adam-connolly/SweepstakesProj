@@ -10,6 +10,8 @@ namespace SweepstakesSIm
     {
         static void Main(string[] args)
         {
+
+            MarketingFirm firm = new MarketingFirm(new SweepstakesQueueManager());
         }
     }
 }
